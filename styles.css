@@ -798,7 +798,7 @@ button {
 
 /* Footer Styles */
 .footer {
-  padding: 60px 0 30px;
+  padding: 60px 0 0px;
 }
 
 .footer .container {
@@ -972,6 +972,10 @@ button {
 }
 
 @media (min-width: 768px) {
+  .footer {
+  padding-bottom: 30px;
+  }
+
   h1 {
     font-size: 3.5rem;
   }

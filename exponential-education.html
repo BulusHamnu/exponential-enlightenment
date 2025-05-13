@@ -4,14 +4,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Full Moon Fusion - Exponential Enlightenment</title>
-    <meta name="description" content="Monthly full moon meditation sessions to harness the moon's transformative energy." />
+    <title>Boodi.ai - Exponential Enlightenment</title>
+    <meta name="description" content="Your personal AI meditation guide and mindfulness coach." />
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+      .education-cover {
+        height: 250px;
+        margin-top: 1.5rem;
+        background-image: url("assert/images/exponetial-education-cover.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 0% 78%;
+      }
+
+      .mt {
+        margin-top: 1.7rem;
+      }
+
+    </style>
+
   </head>
   <body class="theme-default">
     <!-- Header -->
@@ -20,13 +37,13 @@
         <a href="index.html" class="logo">E</a>
         <nav>
           <ul class="main-nav">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html" >Home</a></li>
             <li><a href="index.html#about-section">About Me</a></li>
             <li><a href="index.html#testimonials">Testimonials</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="booking.html">Book A Call</a></li>
             <li><a href="resources.html">Resources</a></li>
-            <li><a href="exponential-education.html">Education</a></li>
+            <li><a class="active" href="exponential-education.html">Education</a></li>
             
             <li><a href="boodi.html">Boodi.ai</a></li>
           </ul>
@@ -66,17 +83,18 @@
     <!-- Main Content -->
     <main>
       <!-- Hero Section -->
-      <section class="section" style="padding-top: 120px;">
+      <section class="section" >
+        <!-- style="padding-top: 120px;" -->
         <div class="container">
-          <h1 class="fade-in">Full Moon Fusion</h1>
-
-          <p class="fade-in-delay subtitle">Full Moon Fusion is more than just an event; it’s a transformative journey that aligns with the powerful cycle of the full moon. Every month, we gather to tap into this universal energy, which has long been revered for its ability to inspire change and reflection. Our series is meticulously crafted to guide you through manifesting your aspirations and shedding what no longer serves you.</p>
-          <p class="fade-in-delay subtitle">Each Full Moon Fusion gathering is a unique experience, weaving together various introspective practices. We begin with guided meditation, creating a space for inner peace and clarity. Participants are then led through creative expression activities, designed to bring the subconscious to the surface in vivid colors and forms. These practices not only foster personal growth but also cultivate a sense of connection and support among attendees.
-          </p>
-          <p class="fade-in-delay subtitle">Beyond individual growth, community building is a cornerstone of Full Moon Fusion. We believe in the power of collective energy and shared experiences. As we reflect, create, and share, we strengthen the bonds within our community, supporting each other in our individual and collective journeys.</p>
-          <p class="fade-in-delay subtitle">Join us each month under the glow of the full moon. Whether you seek to set intentions, release the old, or simply find a moment of serenity in a busy world, <a style="color: var(--text-color); text-decoration: underline" href="https://fullmoonfusion.com"><b>Full Moon Fusion</b></a> offers a sanctuary for your spirit. Embrace the journey with us, and witness the life of your dreams unfold with each passing moon.</p>
-
-          <a target="_blank" style="margin-top: 2rem;" href="https://fullmoonfusion.com" class="btn primary-btn fade-in-delay-2">Join Our Next Session</a>
+          <div class="education-cover"></div>
+          <h1 class="fade-in mt">Exponential Education</h1>
+          
+          
+          <!-- <img class="education-cover" src="assert/images/exponetial-education-cover.jpg" alt="Exponetial education cover"> -->
+          <p class="fade-in-delay subtitle max-width mt">We are a collective of visionary educators, creators, and mentors, dedicated to shaping the future through mindful learning, creative expression, meaningful collaboration, innovative technology, and a conscious, human-centered curriculum.</p>
+          <p>At Exponential Education, we don’t just teach — we empower, we co-create, and we grow together.</p>
+          <p>Join the movement. Build the future.</p>
+          <p>Join for free here &rightarrow; <a style="color: var(--text-color); text-decoration: underline" target="_blank" href="http://exponential-education.com/">Exponential-Education</a></p>
         </div>
       </section>
       
@@ -101,13 +119,13 @@
           <div class="footer-col">
             <h3>Quick Links</h3>
             <ul class="footer-links">
-              <li><a href="index.html">Home</a></li>
+              <li><a  href="index.html">Home</a></li>
               <li><a href="index.html#about-section">About Me</a></li>
               <li><a href="index.html#testimonials">Testimonials</a></li>
               <li><a href="booking.html">Book A Call</a></li>
               <li><a href="contact.html">Contact</a></li>
               <li><a href="resources.html">Resources</a></li>
-              <li><a href="exponential-education.html">Education</a></li>
+              <li><a class="active" href="exponential-education.html">Education</a></li>
               <li><a href="boodi.html">Boodi.ai</a></li>
             </ul>
 
@@ -127,5 +145,6 @@
     </footer>
 
     <script src="script.js"></script>
+    
   </body>
 </html>
