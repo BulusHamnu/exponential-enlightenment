@@ -8,7 +8,7 @@ const formStatus = document.getElementById("form-status");
 const scrollElements = document.querySelectorAll(".animate-on-scroll");
 const overlayBlock = document.querySelector(".overlay-block");
 
-// Mobile Menu Toggle
+/* Mobile Menu Toggle */
 if (mobileMenuToggle) {
   function toogleMobileNavBar() {
     mobileMenuToggle.classList.toggle("active");
@@ -27,20 +27,20 @@ if (mobileMenuToggle) {
   );
 }
 
-// Theme Switcher
+/* Theme Switcher */
 themeToggle.addEventListener("click", function (e) {
   e.stopPropagation();
   themeMenu.classList.toggle("show");
 });
 
-// Close theme menu when clicking outside
+/* Close theme menu when clicking outside */
 document.addEventListener("click", function (e) {
   if (!themeToggle.contains(e.target)) {
     themeMenu.classList.remove("show");
   }
 });
 
-// Theme Options
+/* Theme Options */
 themeOptions.forEach((option) => {
   option.addEventListener("click", function () {
     const theme = this.getAttribute("data-theme");
@@ -56,7 +56,7 @@ themeOptions.forEach((option) => {
   });
 });
 
-// Load saved theme from localStorage
+/* Load saved theme from localStorage */
 document.addEventListener("DOMContentLoaded", function () {
   const savedTheme = localStorage.getItem("theme") || "default";
   document.body.classList.add(`theme-${savedTheme}`);
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Testimonial Carousel
+/* Testimonial Carousel */
 const container = document.querySelector(".testimonial-container");
 if (container) {
   const nodes = Array.from(container.children);
@@ -91,7 +91,7 @@ if (container) {
   });
 }
 
-// Contact Form
+/* Contact Form */
 if (contactForm) {
   contactForm.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -127,18 +127,21 @@ if (contactForm) {
   });
 }
 
-// Scroll Animations
-function checkScrollElements() {
-  const triggerBottom = window.innerHeight * 0.85;
+/* Scroll Animations */
+const observer2 = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  },
+  {
+    threshold: 0.3,
+    rootMargin: "0px 0px -100px 0px",
+  },
+);
 
-  scrollElements.forEach((element) => {
-    const elementTop = element.getBoundingClientRect().top;
-
-    if (elementTop < triggerBottom) {
-      element.classList.add("show");
-    }
-  });
-}
-
-window.addEventListener("scroll", checkScrollElements);
-window.addEventListener("load", checkScrollElements);
+scrollElements.forEach((element) => {
+  observer2.observe(element);
+});
