@@ -10,17 +10,21 @@ const overlayBlock = document.querySelector(".overlay-block");
 
 // Mobile Menu Toggle
 if (mobileMenuToggle) {
-  mobileMenuToggle.addEventListener("click", function () {
-    this.classList.toggle("active");
-    mainNav.classList.toggle("show");
-    overlayBlock.classList.toggle("show");
-  });
-
-  overlayBlock.addEventListener("click", () => {
+  function toogleMobileNavBar() {
     mobileMenuToggle.classList.toggle("active");
     mainNav.classList.toggle("show");
     overlayBlock.classList.toggle("show");
-  });
+  }
+
+  mobileMenuToggle.addEventListener("click", () => toogleMobileNavBar());
+  overlayBlock.addEventListener("click", () => toogleMobileNavBar());
+
+  const navLinks = mainNav.querySelectorAll("li");
+  navLinks.forEach((navLink) =>
+    navLink.addEventListener("click", () => {
+      if (mainNav.classList.contains("show")) toogleMobileNavBar();
+    }),
+  );
 }
 
 // Theme Switcher
