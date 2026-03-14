@@ -145,3 +145,33 @@ const observer2 = new IntersectionObserver(
 scrollElements.forEach((element) => {
   observer2.observe(element);
 });
+
+/* Home section observer for links highlighting */
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const elementId = entry.target.getAttribute("id");
+        const navLinks = document.querySelectorAll(".main-nav li a");
+
+        navLinks.forEach((link) => {
+          const K = link.getAttribute(`href`).split("#")[1];
+          if (K !== elementId) {
+            link.classList.remove("active");
+            return;
+          }
+          link.classList.add("active");
+        });
+      }
+    });
+  },
+  {
+    threshold: 0.3,
+    rootMargin: "0px 0px -100px 0px",
+  },
+);
+
+const homeSections = document.querySelectorAll(".home-section");
+homeSections.forEach((element) => {
+  observer.observe(element);
+});
